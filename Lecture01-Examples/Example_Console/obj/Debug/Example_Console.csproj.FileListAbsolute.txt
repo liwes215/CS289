@@ -1,0 +1,7 @@
+D:\CS289\Lecture01-Examples\Example_Console\bin\Debug\Example_Console.exe.config
+D:\CS289\Lecture01-Examples\Example_Console\bin\Debug\Example_Console.exe
+D:\CS289\Lecture01-Examples\Example_Console\bin\Debug\Example_Console.pdb
+D:\CS289\Lecture01-Examples\Example_Console\obj\Debug\Example_Console.csprojResolveAssemblyReference.cache
+D:\CS289\Lecture01-Examples\Example_Console\obj\Debug\Example_Console.csproj.CoreCompileInputs.cache
+D:\CS289\Lecture01-Examples\Example_Console\obj\Debug\Example_Console.exe
+D:\CS289\Lecture01-Examples\Example_Console\obj\Debug\Example_Console.pdb
