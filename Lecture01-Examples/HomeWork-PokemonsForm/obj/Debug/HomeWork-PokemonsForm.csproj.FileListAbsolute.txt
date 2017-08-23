@@ -1,0 +1,10 @@
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\bin\Debug\HomeWork-PokemonsForm.exe.config
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\bin\Debug\HomeWork-PokemonsForm.exe
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\bin\Debug\HomeWork-PokemonsForm.pdb
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork-PokemonsForm.csprojResolveAssemblyReference.cache
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork_PokemonsForm.Form1.resources
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork_PokemonsForm.Properties.Resources.resources
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork-PokemonsForm.csproj.GenerateResource.Cache
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork-PokemonsForm.csproj.CoreCompileInputs.cache
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork-PokemonsForm.exe
+D:\CS289\Lecture01-Examples\HomeWork-PokemonsForm\obj\Debug\HomeWork-PokemonsForm.pdb

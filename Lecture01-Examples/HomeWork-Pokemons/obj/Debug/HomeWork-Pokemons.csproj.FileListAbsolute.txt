@@ -1,0 +1,7 @@
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\bin\Debug\HomeWork-Pokemons.exe.config
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\bin\Debug\HomeWork-Pokemons.exe
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\bin\Debug\HomeWork-Pokemons.pdb
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\obj\Debug\HomeWork-Pokemons.csprojResolveAssemblyReference.cache
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\obj\Debug\HomeWork-Pokemons.csproj.CoreCompileInputs.cache
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\obj\Debug\HomeWork-Pokemons.exe
+D:\CS289\Lecture01-Examples\HomeWork-Pokemons\obj\Debug\HomeWork-Pokemons.pdb
