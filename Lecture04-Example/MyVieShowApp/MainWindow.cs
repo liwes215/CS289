@@ -15,6 +15,7 @@ namespace MyVieShowApp
         private PictureBox[] seats;
         private Random random;
         private bool[] seatsAvail;
+        private int numberOfRow = 6;
 
         public MainWindow()
         {
@@ -28,7 +29,6 @@ namespace MyVieShowApp
         {
             int x_ini = 12;
             int y_ini = 12;
-            int numberOfRow = 6;
             int w = 80;
             int h = 120;
             int g = 10;
@@ -65,9 +65,41 @@ namespace MyVieShowApp
         private void summitButton_Click(object sender, EventArgs e)
         {
             int numberOfPeople = selectNumberComboBox.SelectedIndex + 1;
-            MessageBox.Show(numberOfPeople.ToString());
-
-            //for(int number = 0; number < seatsAvail.Length; number ++)
+            if (numberOfPeople == 0)
+            {
+                MessageBox.Show("請選擇要購買的張數");
+            }
+            else
+            {
+                for (int number = 0; number <= seatsAvail.Length - numberOfPeople; number++)
+                {
+                    if (!seatsAvail[number])
+                        continue;
+                    int row = number / numberOfRow;
+                    int col = number % numberOfRow;
+                    int finded = 1;
+                    for (int next = number + 1; next < number + numberOfPeople; next++)
+                    {
+                        if (seatsAvail[next] && next / numberOfRow == row)
+                        {
+                            finded++;
+                        }
+                        else
+                            break;
+                    }
+                    if (finded == numberOfPeople)
+                    {
+                        string receipt = "您選擇的座位是:\n";
+                        for (int index = number; index < number + numberOfPeople; index++)
+                        {
+                            seats[index].Image = Properties.Resources.seat_select;
+                            receipt += string.Format("第{0}排{1}號\n", index / numberOfRow + 1, index % numberOfRow);
+                        }
+                        receiptRichTextBox.Text = receipt;
+                        break;
+                    }
+                }
+            }
         }
     }
 }

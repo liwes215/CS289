@@ -31,6 +31,7 @@
             this.selectNumberComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.summitButton = new System.Windows.Forms.Button();
+            this.receiptRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // selectNumberComboBox
@@ -44,7 +45,7 @@
             "5"});
             this.selectNumberComboBox.Location = new System.Drawing.Point(569, 49);
             this.selectNumberComboBox.Name = "selectNumberComboBox";
-            this.selectNumberComboBox.Size = new System.Drawing.Size(140, 20);
+            this.selectNumberComboBox.Size = new System.Drawing.Size(143, 20);
             this.selectNumberComboBox.TabIndex = 0;
             // 
             // label1
@@ -62,17 +63,27 @@
             this.summitButton.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.summitButton.Location = new System.Drawing.Point(569, 85);
             this.summitButton.Name = "summitButton";
-            this.summitButton.Size = new System.Drawing.Size(140, 30);
+            this.summitButton.Size = new System.Drawing.Size(143, 30);
             this.summitButton.TabIndex = 2;
             this.summitButton.Text = "自動劃位";
             this.summitButton.UseVisualStyleBackColor = true;
             this.summitButton.Click += new System.EventHandler(this.summitButton_Click);
+            // 
+            // receiptRichTextBox
+            // 
+            this.receiptRichTextBox.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.receiptRichTextBox.Location = new System.Drawing.Point(569, 136);
+            this.receiptRichTextBox.Name = "receiptRichTextBox";
+            this.receiptRichTextBox.Size = new System.Drawing.Size(143, 157);
+            this.receiptRichTextBox.TabIndex = 3;
+            this.receiptRichTextBox.Text = "";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 474);
+            this.Controls.Add(this.receiptRichTextBox);
             this.Controls.Add(this.summitButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectNumberComboBox);
@@ -89,6 +100,7 @@
         private System.Windows.Forms.ComboBox selectNumberComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button summitButton;
+        private System.Windows.Forms.RichTextBox receiptRichTextBox;
     }
 }
 
