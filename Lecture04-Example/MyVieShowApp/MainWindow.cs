@@ -16,6 +16,8 @@ namespace MyVieShowApp
         private Random random;
         private bool[] seatsAvail;
         private int numberOfRow = 6;
+        private int seatSelect = 0;
+        private int numberOfPeopleOld;
 
         public MainWindow()
         {
@@ -58,7 +60,8 @@ namespace MyVieShowApp
                 seats[count].Location = new Point(x, y);
                 seats[count].Size = new Size(w, h);
                 seats[count].SizeMode = PictureBoxSizeMode.Zoom;
-                this.Controls.Add(seats[count]);
+                Controls.Add(seats[count]);
+                seats[count].Click += new EventHandler(pictureBox1_Click);
             }
         }
 
@@ -93,13 +96,65 @@ namespace MyVieShowApp
                         for (int index = number; index < number + numberOfPeople; index++)
                         {
                             seats[index].Image = Properties.Resources.seat_select;
-                            receipt += string.Format("第{0}排{1}號\n", index / numberOfRow + 1, index % numberOfRow);
+                            receipt += string.Format("第{0}排{1}號\n", index / numberOfRow + 1, index % numberOfRow + 1);
                         }
                         receiptRichTextBox.Text = receipt;
+                        numberOfPeopleOld = numberOfPeople;
+                        seatSelect = number;
                         break;
                     }
                 }
             }
+        }
+
+        private void nextSeatButton_Click(object sender, EventArgs e)
+        {
+            for (int seatChange = seatSelect; seatChange < seatSelect + numberOfPeopleOld; seatChange++)
+            {
+                seats[seatChange].Image = Properties.Resources.seat_avail;
+            }
+            int numberOfPeople = selectNumberComboBox.SelectedIndex + 1;
+            if (numberOfPeople == 0)
+            {
+                MessageBox.Show("請選擇要購買的張數");
+            }
+            else
+            {
+                for (int number = seatSelect + 1; number <= seatsAvail.Length - numberOfPeople; number++)
+                {
+                    if (!seatsAvail[number])
+                        continue;
+                    int row = number / numberOfRow;
+                    int col = number % numberOfRow;
+                    int finded = 1;
+                    for (int next = number + 1; next < number + numberOfPeople; next++)
+                    {
+                        if (seatsAvail[next] && next / numberOfRow == row)
+                        {
+                            finded++;
+                        }
+                        else
+                            break;
+                    }
+                    if (finded == numberOfPeople)
+                    {
+                        string receipt = "您選擇的座位是:\n";
+                        for (int index = number; index < number + numberOfPeople; index++)
+                        {
+                            seats[index].Image = Properties.Resources.seat_select;
+                            receipt += string.Format("第{0}排{1}號\n", index / numberOfRow + 1, index % numberOfRow + 1);
+                        }
+                        receiptRichTextBox.Text = receipt;
+                        numberOfPeopleOld = numberOfPeople;
+                        seatSelect = number;
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
